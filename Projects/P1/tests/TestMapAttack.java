@@ -4,6 +4,6 @@ import junit.framework.*;
 public class TestMapAttack {
 
 	public void testMapAttack() {
-		return null;	
+			
 	}
 }

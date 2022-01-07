@@ -3,7 +3,6 @@ import java.util.HashSet;
 import javax.swing.JComponent;
 
 
-
 public class Map{
 
 	public enum Type {
