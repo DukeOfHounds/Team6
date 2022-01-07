@@ -64,9 +64,9 @@ public class Map{
 		//wallSet and emptySet will help you write this method
 		HashSet<Type> typesAtLoc = field.get(loc);
 
-		// null check
+		// null check --> treat as wall extended
 		if (typesAtLoc == null){
-			return null;
+			return wallSet;
 		}
 
 		// otherwise, return types
