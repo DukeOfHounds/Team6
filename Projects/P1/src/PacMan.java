@@ -28,7 +28,8 @@ public class PacMan{
 
 		// get random move
 		Random rand = new Random();
-		Location move = moves.get(rand.nextInt(moves.size()));
+		int randomIndex = rand.nextInt(moves.size());
+		Location move = moves.get(randomIndex);
 
 		// complete move
 		this.myLoc = move;
