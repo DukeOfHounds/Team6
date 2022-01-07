@@ -1,6 +1,7 @@
 import java.util.HashSet;
 import java.util.ArrayList;
 import javax.swing.JComponent;
+import java.util.Random;
 
 public class PacMan{
 	String myName;
@@ -19,7 +20,13 @@ public class PacMan{
 	}
 
 	public boolean move() {
-		return false;
+		ArrayList<Location> moves = get_valid_moves();
+		if (moves.isEmpty()) {
+			return false;
+		}
+		Random rand = new Random();
+		Location move = moves.get(rand.nextInt(moves.size()));
+		return myMap.move("pacman", move, Map.Type.PACMAN);
 	}
 
 	public boolean is_ghost_in_range() { 
