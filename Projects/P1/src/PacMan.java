@@ -32,6 +32,7 @@ public class PacMan{
 
 		// complete move
 		this.myLoc = move;
+		this.myMap.move(myName, move, Map.Type.PACMAN);
 		return true;
 	}
 
