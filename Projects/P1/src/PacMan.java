@@ -17,7 +17,29 @@ public class PacMan{
 	}
 
 	public ArrayList<Location> get_valid_moves() {
-		return null;	
+		ArrayList<Location> possible_moves = new ArrayList<Location>();
+		
+		// check possible up move
+		if (!myMap.getLoc(new Location(myLoc.x, myLoc.y + 1)).contains(Map.Type.WALL) && !myMap.getLoc(new Location(myLoc.x, myLoc.y + 1)).contains(Map.Type.GHOST)){
+			possible_moves.add(new Location(myLoc.x, myLoc.y + 1));
+		}
+
+		// Check possible down move
+		if (!myMap.getLoc(new Location(myLoc.x, myLoc.y - 1)).contains(Map.Type.WALL) && !myMap.getLoc(new Location(myLoc.x, myLoc.y - 1)).contains(Map.Type.GHOST)){
+			possible_moves.add(new Location(myLoc.x, myLoc.y - 1));
+		}
+
+		// Check possible left move
+		if (!myMap.getLoc(new Location(myLoc.x - 1, myLoc.y)).contains(Map.Type.WALL) && !myMap.getLoc(new Location(myLoc.x - 1, myLoc.y)).contains(Map.Type.GHOST)){
+			possible_moves.add(new Location(myLoc.x - 1, myLoc.y));
+		}
+
+		// Check possible right move
+		if (!myMap.getLoc(new Location(myLoc.x + 1, myLoc.y)).contains(Map.Type.WALL) && !myMap.getLoc(new Location(myLoc.x + 1, myLoc.y)).contains(Map.Type.GHOST)){
+			possible_moves.add(new Location(myLoc.x + 1, myLoc.y));
+		}
+
+		return possible_moves;
 	}
 
 	public boolean move() {
