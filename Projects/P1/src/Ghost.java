@@ -24,7 +24,9 @@ public class Ghost{
 		}
 		Random rand = new Random();
 		Location move = moves.get(rand.nextInt(moves.size()));
-		return myMap.move(myName, move, Map.Type.GHOST);
+		this.myLoc = move;
+		myMap.move(myName, move, Map.Type.GHOST);
+		return true;
 	}
 
 	public boolean is_pacman_in_range() { 
