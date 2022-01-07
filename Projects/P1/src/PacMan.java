@@ -26,7 +26,7 @@ public class PacMan{
 		}
 		Random rand = new Random();
 		Location move = moves.get(rand.nextInt(moves.size()));
-		return myMap.move("pacman", move, Map.Type.PACMAN);
+		return myMap.move(myName, move, Map.Type.PACMAN);
 	}
 
 	public boolean is_ghost_in_range() { 
