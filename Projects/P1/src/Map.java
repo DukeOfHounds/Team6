@@ -2,6 +2,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import javax.swing.JComponent;
 
+
 public class Map{
 
 	public enum Type {
@@ -76,7 +77,15 @@ public class Map{
 	
 	public HashSet<Type> getLoc(Location loc) {
 		//wallSet and emptySet will help you write this method
-		return null;
+		HashSet<Type> typesAtLoc = field.get(loc);
+
+		// null check --> treat as wall extended
+		if (typesAtLoc == null){
+			return wallSet;
+		}
+
+		// otherwise, return types
+		return typesAtLoc;
 	}
 
 	public boolean attack(String Name) {

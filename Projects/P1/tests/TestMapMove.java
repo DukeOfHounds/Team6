@@ -16,6 +16,7 @@ public class TestMapMove extends TestCase {
 	}
 
 	public void testMapMove() {
+
 		// Get Map
 		Map currMap = frame.getMap();
 		// check pacman at 1,1
@@ -31,5 +32,8 @@ public class TestMapMove extends TestCase {
 		assertTrue(!setOneOne.contains(Map.Type.PACMAN));
 		// try moving pacmac to 0,0 but there is wall
 		assertTrue(!currMap.move("pacman", new Location(0,0), Map.Type.PACMAN));
+
+		
+
 	}
 }
