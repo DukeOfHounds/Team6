@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.HashSet;
 import javax.swing.JComponent;
+import java.lang.Math;
 
 
 public class Map{
@@ -90,6 +91,16 @@ public class Map{
 
 	public boolean attack(String Name) {
 		//update gameOver
+		Location ghost_loc = locations.get(Name);
+		Location pac_loc = locations.get("pacman");
+		int x_diff = Math.abs(ghost_loc.x - pac_loc.x);
+		int y_diff = Math.abs(ghost_loc.y - pac_loc.y);
+
+		if (x_diff+y_diff<= 1)
+		{
+			gameOver = true;
+			return true;
+		}
 		return false;
 	}
 	
