@@ -94,7 +94,7 @@ public class Map{
 	}
 	
 	public JComponent eatCookie(String name) {
-		// this method is called by PacMan in case of cookie exising on pacman's loc
+		// this method is called by PacMan in case of cookie exising on pacman's location
 		// location of cookie can't be null if the method is called but we check anyway
 		Location cookieLoc = locations.get(name);
 		if (cookieLoc == null) {
