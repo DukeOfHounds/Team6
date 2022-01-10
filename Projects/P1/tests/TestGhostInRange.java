@@ -14,7 +14,7 @@ public class TestGhostInRange extends TestCase {
     }
     public void testGhostInRange()
     {
-        assertTrue(pacman.is_ghost_in_range());
+        assertTrue(pacman.is_ghost_in_range()); 
     }
 }
 
