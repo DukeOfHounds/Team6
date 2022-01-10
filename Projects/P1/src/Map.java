@@ -94,8 +94,8 @@ public class Map{
 	}
 	
 	public JComponent eatCookie(String name) {
-		// this method is called by PacMan in case of cookie exising on pacman's location
-		// location of cookie can't be null if the method is called but we check anyway
+		// this method is called by PacMan in case of cookie existing on Pacman's location
+		// Location of cookie can't be null if the method is called but we check anyway
 		Location cookieLoc = locations.get(name);
 		if (cookieLoc == null) {
 			return null;
@@ -104,15 +104,22 @@ public class Map{
 		// here cookie exists, remove it from the field
 		HashSet<Type> locField = field.get(cookieLoc);
 		boolean locFieldCleaned = locField.remove(Type.COOKIE);
+
 		// if removing COOKIE from FIELD fails -> error
 		if (!locFieldCleaned)
 			return null;
+
 		// we extract the cookie via its id from components' field
 		String cookieID = "tok_x" + cookieLoc.x + "_y" + cookieLoc.y;
 
 		JComponent cookieComp = components.get(cookieID);
 		if (cookieComp == null)
 			return null;
+
+		// remove from components
+		components.remove(cookieID);
+		// remove from locations
+		locations.remove(cookieID);
 
 		// if all done correctly, the cookie is consumed!
 		this.cookies++;
