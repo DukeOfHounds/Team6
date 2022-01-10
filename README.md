@@ -21,6 +21,7 @@ ex: java -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestG
 ```
 
 ## Image of Pacman running
+![Image of PacMan](https://i.imgur.com/dlSCJVL.png)
 
 ## List of Functions
 
