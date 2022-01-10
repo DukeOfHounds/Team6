@@ -71,7 +71,14 @@ public class PacMan{
 		return false;
 	}
 
-	public JComponent consume() { 
- 		return null;
+	public JComponent consume() {
+		
+		HashSet<Map.Type> pacmanCurrLoc = myMap.getLoc(myLoc);
+
+		if (pacmanCurrLoc.contains(Map.Type.COOKIE)) {
+			return myMap.eatCookie(myName);
+		}
+		return null;
 	}
+
 }
