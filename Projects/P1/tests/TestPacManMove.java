@@ -18,6 +18,7 @@ public class TestPacManMove extends TestCase {
 		frame.startGame();
 	}
 	public void testPacManMove() throws FileNotFoundException{
+
 		// confirm pacman location is 1,1
 		assertTrue(frame.getMap().getLoc(new Location(1,1)).contains(Map.Type.PACMAN));
 		ArrayList<Location> moves = pacman.get_valid_moves();
@@ -25,5 +26,6 @@ public class TestPacManMove extends TestCase {
 		pacman.move();
 		// confirm pacman is not at 1,1 anymore
 		assertTrue(!frame.getMap().getLoc(new Location(1,1)).contains(Map.Type.PACMAN));
+
 	}
 }

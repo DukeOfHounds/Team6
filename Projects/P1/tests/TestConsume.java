@@ -17,7 +17,9 @@ public class TestConsume extends TestCase {
 			frame.startGame();
 		}
 	public void testConsume() throws FileNotFoundException {
+
 		//Map currMap = frame.getMap();
 		assertNotNull(pacman.consume());
+
 	}
 }

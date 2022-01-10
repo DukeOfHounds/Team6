@@ -13,6 +13,9 @@ public class TestPacManValidMoves extends TestCase {
 		frame.startGame();
 	}
 
+
+
+
 	public void testPacManValidMoves() {
 		Location a = new Location(1, 1);
 		Location b = new Location(3, 1);
@@ -20,6 +23,6 @@ public class TestPacManValidMoves extends TestCase {
 		cords.add(a);
 		cords.add(b);
 		assertEquals(pacman.get_valid_moves(), cords);
-	 
+
 	}
 }
