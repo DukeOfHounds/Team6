@@ -30,8 +30,7 @@ public class TestMapMove extends TestCase {
 		// check pacman not at 1,1 still
 		setOneOne = currMap.getLoc(new Location(1,1));
 		assertTrue(!setOneOne.contains(Map.Type.PACMAN));
-		// try moving pacmac to 0,0 but there is wall
-		assertTrue(!currMap.move("pacman", new Location(0,0), Map.Type.PACMAN));
+		
 
 		
 
