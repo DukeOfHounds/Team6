@@ -103,7 +103,7 @@ ex: java -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestG
 - Type: (String name, Location loc, Type type) –> Boolean
 - Author: Luke Perry
 - Implementation Description: Move is implemented by first getting the old location and confirming it is not a wall or null, then adding it to locations. Next, we update the jcomponent, and finally we update fields by placing the object in the new location and removing it from the old location.
-- Test Description: To test move is implemented correctly, we first instantiate pacman at a location. Next we assert pacman is at the original location, then we move pacman to another location, assert pacman is at the new location, and assert pacman is not at the old location. Next, we try moving pacman to a location that pacman cannot move, because there is a wall, and assert pacman cannot move to that location.
+- Test Description: To test move is implemented correctly, we first instantiate pacman at a location. Next we assert pacman is at the original location, then we move pacman to another location, assert pacman is at the new location, and assert pacman is not at the old location. 
 
 #### getLoc()
 
