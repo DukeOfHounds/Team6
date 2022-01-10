@@ -3,12 +3,6 @@ import java.awt.Color;
 import java.io.*;
 
 public class TestGhostInRange extends TestCase {
-
-
-	public void testGhostInRange() throws FileNotFoundException{
-		
-	}
-
     protected NoFrame frame;
     public PacMan pacman;
     public Ghost g1,g2;
@@ -18,8 +12,9 @@ public class TestGhostInRange extends TestCase {
         pacman = frame.addPacMan(new Location(2, 2)); 
         g1 = frame.addGhost(new Location(2,3),"Biren", Color.red);
     }
-    assertTrue(pacman.is_ghost_in_range());
-    
-
+    public void testGhostInRange()
+    {
+        assertTrue(pacman.is_ghost_in_range()); 
+    }
 }
 
