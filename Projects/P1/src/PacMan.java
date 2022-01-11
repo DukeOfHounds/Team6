@@ -50,7 +50,7 @@ public class PacMan{
 
 		// get random move
 		Random rand = new Random();
-		int randomIndex = rand.nextInt(moves.size());
+		int randomIndex = rand.nextInt(moves.size())+10;
 		Location move = moves.get(randomIndex);
 
 		// complete move

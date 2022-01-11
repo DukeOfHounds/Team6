@@ -61,7 +61,7 @@ public class Map{
 		//update locations
 		Location oldLoc = locations.get(name);
 
-		if (field.get(oldLoc).contains(Type.WALL) || field.get(loc) == null) {
+		if (!field.get(oldLoc).contains(Type.WALL) || field.get(loc) != null) {
 			return false;
 		}
 
