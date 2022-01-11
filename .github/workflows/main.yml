@@ -13,5 +13,4 @@ jobs:
           java-version: '17'
       - name: compile code
         working-directory: ./Projects/P1
-        run: |
-          javac -cp "src/" src/*.java
+        run: javac -cp "src/" src/*.java
