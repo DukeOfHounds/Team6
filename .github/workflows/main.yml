@@ -15,4 +15,3 @@ jobs:
         working-directory: ./Projects/P1
         run: |
           javac -cp "src/" src/*.java
-          java -cp "src/" StartMenu
