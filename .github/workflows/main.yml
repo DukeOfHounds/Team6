@@ -11,6 +11,6 @@ jobs:
         with:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '17'
-      - name: compile code
+      - name: Compile code
         working-directory: ./Projects/P1
         run: javac -cp "src/" src/*.java
