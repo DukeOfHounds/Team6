@@ -13,4 +13,6 @@ jobs:
           java-version: '17'
       - name: Compile code
         working-directory: ./Projects/P1
-        run: javac -cp "src/" src/*.java
+        run: |
+          javac -cp "src/" src/*.java
+          javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
