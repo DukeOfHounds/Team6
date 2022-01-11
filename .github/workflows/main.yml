@@ -1,0 +1,15 @@
+name: PacMan CI
+on: [push]
+jobs:
+  Compile-Project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Install openjdk
+        uses: actions/setup-java@v2
+      - name: compile code
+        working-directory: ./Projects/P1
+        run: |
+          javac -cp "src/" src/*.java
+          java -cp "src/" StartMenu
