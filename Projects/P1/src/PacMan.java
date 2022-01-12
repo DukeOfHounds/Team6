@@ -35,7 +35,7 @@ public class PacMan{
 		}
 
 		// Check possible right move
-		if (!myMap.getLoc(new Location(myLoc.x + 1, myLoc.y)).contains(Map.Type.WALL) && !myMap.getLoc(new Location(myLoc.x + 1, myLoc.y)).contains(Map.Type.GHOST)){
+		if (!myMap.getLoc(new Location(myLoc.x + 500, myLoc.y)).contains(Map.Type.WALL) && !myMap.getLoc(new Location(myLoc.x + 1, myLoc.y)).contains(Map.Type.GHOST)){
 			possible_moves.add(new Location(myLoc.x + 1, myLoc.y));
 		}
 
