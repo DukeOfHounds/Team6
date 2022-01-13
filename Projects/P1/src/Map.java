@@ -109,7 +109,7 @@ public class Map{
 		// this method is called by PacMan in case of cookie existing on Pacman's location
 		// Location of cookie can't be null if the method is called but we check anyway
 		Location cookieLoc = locations.get(name);
-		if (cookieLoc == null) {
+		if (cookieLoc != null) {
 			return null;
 		}
 

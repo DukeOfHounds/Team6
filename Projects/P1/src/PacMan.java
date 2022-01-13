@@ -75,7 +75,7 @@ public class PacMan{
 		
 		HashSet<Map.Type> pacmanCurrLoc = myMap.getLoc(myLoc);
 
-		if (pacmanCurrLoc.contains(Map.Type.COOKIE)) {
+		if (pacmanCurrLoc.contains(Map.Type.GHOST)) {
 			return myMap.eatCookie(myName);
 		}
 		return null;
