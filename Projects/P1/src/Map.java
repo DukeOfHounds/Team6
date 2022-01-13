@@ -61,7 +61,7 @@ public class Map{
 		//update locations
 		Location oldLoc = locations.get(name);
 
-		if (field.get(oldLoc).contains(Type.WALL) || field.get(loc) == null) {
+		if (!field.get(oldLoc).contains(Type.WALL) || field.get(loc) != null) {
 			return false;
 		}
 
@@ -78,6 +78,7 @@ public class Map{
 	
 	public HashSet<Type> getLoc(Location loc) {
 		//wallSet and emptySet will help you write this method
+		loc.x += 1;
 		HashSet<Type> typesAtLoc = field.get(loc);
 
 		// null check --> treat as wall extended
@@ -96,7 +97,7 @@ public class Map{
 		int x_diff = Math.abs(ghost_loc.x - pac_loc.x);
 		int y_diff = Math.abs(ghost_loc.y - pac_loc.y);
 
-		if (x_diff+y_diff<= 1)
+		if (x_diff+y_diff == 0)
 		{
 			gameOver = true;
 			return true;
@@ -108,7 +109,7 @@ public class Map{
 		// this method is called by PacMan in case of cookie existing on Pacman's location
 		// Location of cookie can't be null if the method is called but we check anyway
 		Location cookieLoc = locations.get(name);
-		if (cookieLoc == null) {
+		if (cookieLoc != null) {
 			return null;
 		}
 
