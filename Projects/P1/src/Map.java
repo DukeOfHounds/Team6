@@ -97,7 +97,7 @@ public class Map{
 		int x_diff = Math.abs(ghost_loc.x - pac_loc.x);
 		int y_diff = Math.abs(ghost_loc.y - pac_loc.y);
 
-		if (x_diff+y_diff<= 1)
+		if (x_diff+y_diff == 0)
 		{
 			gameOver = true;
 			return true;
