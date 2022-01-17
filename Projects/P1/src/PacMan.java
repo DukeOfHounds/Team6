@@ -34,7 +34,7 @@ public class PacMan{
 			possible_moves.add(new Location(myLoc.x - 1, myLoc.y));
 		}
 
-		// Check possible right move
+		// Check possible right move            
 		if (!myMap.getLoc(new Location(myLoc.x + 500, myLoc.y)).contains(Map.Type.WALL) && !myMap.getLoc(new Location(myLoc.x + 1, myLoc.y)).contains(Map.Type.GHOST)){
 			possible_moves.add(new Location(myLoc.x + 1, myLoc.y));
 		}
@@ -50,7 +50,7 @@ public class PacMan{
 
 		// get random move
 		Random rand = new Random();
-		int randomIndex = rand.nextInt(moves.size())+10;
+		int randomIndex = rand.nextInt(moves.size());
 		Location move = moves.get(randomIndex);
 
 		// complete move
