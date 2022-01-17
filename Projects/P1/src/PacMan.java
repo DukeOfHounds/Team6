@@ -35,7 +35,7 @@ public class PacMan{
 		}
 
 		// Check possible right move
-		if (!myMap.getLoc(new Location(myLoc.x + 500, myLoc.y)).contains(Map.Type.WALL) && !myMap.getLoc(new Location(myLoc.x + 1, myLoc.y)).contains(Map.Type.GHOST)){
+		if (!myMap.getLoc(new Location(myLoc.x + 1, myLoc.y)).contains(Map.Type.WALL) && !myMap.getLoc(new Location(myLoc.x + 1, myLoc.y)).contains(Map.Type.GHOST)){
 			possible_moves.add(new Location(myLoc.x + 1, myLoc.y));
 		}
 
@@ -50,7 +50,7 @@ public class PacMan{
 
 		// get random move
 		Random rand = new Random();
-		int randomIndex = rand.nextInt(moves.size())+10;
+		int randomIndex = rand.nextInt(moves.size());
 		Location move = moves.get(randomIndex);
 
 		// complete move
@@ -61,10 +61,10 @@ public class PacMan{
 
 	public boolean is_ghost_in_range() 
 	{ 
-		if (myMap.getLoc(new Location(myLoc.x, myLoc.y + 2)).contains(Map.Type.GHOST)||
-		myMap.getLoc(new Location(myLoc.x+2, myLoc.y)).contains(Map.Type.GHOST)||
-		myMap.getLoc(new Location(myLoc.x, myLoc.y-2)).contains(Map.Type.PACMAN)||
-		myMap.getLoc(new Location(myLoc.x-2, myLoc.y)).contains(Map.Type.GHOST))
+		if (myMap.getLoc(new Location(myLoc.x, myLoc.y + 1)).contains(Map.Type.GHOST)||
+		myMap.getLoc(new Location(myLoc.x+1, myLoc.y)).contains(Map.Type.GHOST)||
+		myMap.getLoc(new Location(myLoc.x, myLoc.y-1)).contains(Map.Type.GHOST)||
+		myMap.getLoc(new Location(myLoc.x-1, myLoc.y)).contains(Map.Type.GHOST))
 		{
 			return true;
 		}
@@ -75,7 +75,7 @@ public class PacMan{
 		
 		HashSet<Map.Type> pacmanCurrLoc = myMap.getLoc(myLoc);
 
-		if (pacmanCurrLoc.contains(Map.Type.GHOST)) {
+		if (pacmanCurrLoc.contains(Map.Type.COOKIE)) {
 			return myMap.eatCookie(myName);
 		}
 		return null;
