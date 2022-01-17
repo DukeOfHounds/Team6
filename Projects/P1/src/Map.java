@@ -78,7 +78,6 @@ public class Map{
 	
 	public HashSet<Type> getLoc(Location loc) {
 		//wallSet and emptySet will help you write this method
-		loc.x += 1;
 		HashSet<Type> typesAtLoc = field.get(loc);
 
 		// null check --> treat as wall extended

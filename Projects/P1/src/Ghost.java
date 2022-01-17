@@ -47,7 +47,7 @@ public class Ghost{
 			return false;
 		}
 		Random rand = new Random();
-		Location move = moves.get(rand.nextInt(moves.size())+10);
+		Location move = moves.get(rand.nextInt(moves.size()));
 		this.myLoc = move;
 		myMap.move(myName, move, Map.Type.GHOST);
 		return true;
