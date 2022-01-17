@@ -31,7 +31,7 @@ public class Ghost{
 		}
 
 		// Check possible right move
-		if (!myMap.getLoc(new Location(myLoc.x + 1, myLoc.y)).contains(Map.Type.COOKIE)){
+		if (!myMap.getLoc(new Location(myLoc.x + 1, myLoc.y)).contains(Map.Type.WALL)){
 			possible_moves.add(new Location(myLoc.x + 1, myLoc.y));
 		}
 		
